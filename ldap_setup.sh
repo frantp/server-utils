@@ -18,7 +18,7 @@ echo "$cfg" >> /etc/ldap.conf
 
 # Add sudoers group
 read -p "sudo group (empty to omit): " sugroup
-if [ -z "$sugroup" ]; then
+if [ -n "$sugroup" ]; then
   echo "%$sugroup\tALL=(ALL) ALL" >> /etc/sudoers
 fi
 
