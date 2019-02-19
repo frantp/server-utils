@@ -7,6 +7,13 @@ Run:
 sudo sh -c "$(wget https://raw.githubusercontent.com/frantp/server-utils/master/ldap_setup.sh -O -)"
 ```
 
+## System-wide oh-my-zsh configuration
+
+Run:
+```
+sudo sh -c "$(wget https://raw.githubusercontent.com/frantp/server-utils/master/oh-my-zsh_setup.sh -O -)"
+```
+
 ## libvirt static IP and port forwarding
 
 1. Copy `set_iptables.sh` to `/etc/libvirt/hooks/qemu` in the host machine.

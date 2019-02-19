@@ -14,12 +14,12 @@ echo 'session optional\tpam_mkhomedir.so skel=/etc/skel umask=077' >> /etc/pam.d
 cfg='nss_override_attribute_value loginShell /bin/bash
 ssl start_tls
 tls_checkpeer no'
-echo "$cfg" >> /etc/ldap.conf
+echo "${cfg}" >> /etc/ldap.conf
 
 # Add sudoers group
 read -p "sudo group (empty to omit): " sugroup
-if [ -n "$sugroup" ]; then
-  echo "%$sugroup\tALL=(ALL) ALL" >> /etc/sudoers
+if [ -n "${sugroup}" ]; then
+  echo "%${sugroup}\tALL=(ALL) ALL" >> /etc/sudoers
 fi
 
 # Restart daemons
